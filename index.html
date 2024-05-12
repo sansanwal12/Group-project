@@ -67,7 +67,7 @@ with st.sidebar:
 
     st.subheader("Blur filter")
     blur_mode = st.radio("Blur mode", ("None", "Averaging", "Gaussian", "Median", "Bilateral"))
-    st.markdown("See https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html for the details")
+    st.markdown(" Group project made by : Himanshu Sansanwal, Aasa, Abhishek Kaushal")
     if blur_mode == "Averaging":
         ksize = st.slider("Kernel size", 1, 100, value=10)
         img = cv2.blur(img, (ksize, ksize))
