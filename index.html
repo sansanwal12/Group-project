@@ -38,7 +38,7 @@ if input_mode == "Camera":
     if img_file_buffer is not None:
         bytes_data = img_file_buffer.getvalue()
 else:
- uploaded_file = st.file_uploader("Choose an image file", type=['png', 'jpg'])   
+    uploaded_file = st.file_uploader("Choose an image file", type=['png', 'jpg'])
     if uploaded_file is not None:
         # To read file as bytes:
         bytes_data = uploaded_file.getvalue()
@@ -67,7 +67,7 @@ with st.sidebar:
 
     st.subheader("Blur filter")
     blur_mode = st.radio("Blur mode", ("None", "Averaging", "Gaussian", "Median", "Bilateral"))
-    st.markdown(" Group project made by : Himanshu Sansanwal, Aasa, Abhishek Kaushal")
+    st.markdown("Project Made by : Himanshu sansanwal (11022210105),Aasa (11022210103),Abhishek Kaushal (11022210100)")
     if blur_mode == "Averaging":
         ksize = st.slider("Kernel size", 1, 100, value=10)
         img = cv2.blur(img, (ksize, ksize))
